@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #f7f7f7;
+    background-image: url(../images/bvb\ img.jpeg);
+    background-size: cover;
+}
+
+.wrapper {
+    background: #4dca4d;
+    width: 450px;
+    border-radius: 16px;
+    box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1), 0 32px  64px -48px rgba(0, 0, 0, 0.5);
+}
+
+.form-signup {
+    padding: 25px 30px;
+}
+
+.form-signup header {
+    font-size: 25px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.form-signup form {
+    margin: 20px 0;;
+}
+
+.form-signup .error-txt {
+    color: #721c24;
+    background: #f8d7da;
+    padding: 8px 10px;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #f5c6cb;
+    display: none;
+}
+
+.success {
+    color: #721c24;
+    background: #f8d7da;
+    padding: 8px 10px;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #f5c6cb;
+    display: none;
+}
+
+.field {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.field input {
+    height: 40px;
+    width: 100%;
+    font-size: 16px;
+    padding: 0 10px;
+    outline: none;
+}
+
+.field i {
+    position: absolute;
+    right: 15px;
+    color: #ccc;
+    top: 70%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.field i.active::before {
+    color: #333;
+    content: "\f070";
+}
+
+.Image input {
+    font-size: 17px;
+
+}
+
+.button input {
+    margin-top: 13px;
+    height: 45px;
+    border: none;
+    font-size: 17px;
+    font-weight: 500;
+    background: #333;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.link {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 17px;
+}
+
+.link a {
+    color: #333;
+}
+
+.link a:hover {
+    text-decoration: none;
+}
+
+.users {
+    padding:  25px 30px;
+}
+
+.users header,
+.users-list a {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+    justify-content: space-between;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.users header .content img {
+    height: 50px;
+    width: 50px;
+}
+
+.wrapper img {
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.content {
+    display: flex;
+}
+
+:is(.users, .users-list) .details {
+    color: #000;
+    margin-left: 15px;
+}
+
+.details span {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.logout {
+    color: #fff;
+    font-size: 17px;
+    padding: 7px 15px;
+    background: #333;
+    border-radius: 5px;
+}
+
+.search {
+    margin: 20px 0;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.users .text .search {
+    font-size: 18px;
+}
+
+.search input {
+    position: absolute;
+    height: 42px;
+    width: calc(100% - 50px);
+    border: 1px solid #ccc;
+    padding: 0 13px;
+    font-size: 16px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.search input.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.search button {
+    width: 47px;
+    height: 42px;
+    border: none;
+    outline: none;
+    color: #333;
+    background: #fff;
+    cursor: pointer;
+    font-size: 17px;
+    border-radius: 0 5px 5px 0;
+    transition: all 0.2s ease;
+}
+.search button.active {
+    color: #fff;
+    background: #333;
+}
+
+.search button.active i::before{
+    content: "\f00d";
+}
+.users-list {
+    max-height: 350px;
+    overflow-y: auto;
+}
+
+:is(.chat-box,.users-list)::-webkit-scrollbar {
+    width: 0px;
+}
+
+.users-list a {
+    padding-right: 15px;
+    margin-bottom: 15px;
+    page-break-after: 1;
+    border-bottom-color: #f1f1f1;
+}
+
+.users-list a:last-child {
+    border: none;
+    margin-bottom: 0px;
+}
+
+.users-list a .content img {
+    height: 40px;
+    width: 40px;
+}
+
+.users-list a .content p {
+    color: 67676a;
+}
+
+
+.status-dot {
+    font-size: 12px;
+    color: #468669;
+}
+
+.status-dot.offline {
+color: #ccc;
+}
+
+.chat-area header {
+    display: flex;
+    align-items: center;
+    padding: 10px 30px;
+}
+
+.chat-area header .back-icon {
+    font-size: 19px;
+    color: #333;
+}
+
+.chat-area header img {
+    height: 45px;
+    width: 45px;
+    margin: 0 15px;
+}
+
+.chat-area header span {
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.chat-box {
+    height: 500px;
+    overflow: auto;
+    background: #f7f7f7;
+    padding: 10px 30px 20px 30px;
+    box-shadow: inset 0 32px 32px -32px rgb(0 0 0 / 5%),
+    inset 0 -32px 32px -32px rgb(0 0 0 0/ 5%)
+}
+.chat-box .chat {
+    margin: 15px 0;
+}
+
+.chat-box .chat p {
+    padding: 8px 16px;
+    word-wrap: break-word;
+    box-shadow: 0 0 32px rgb(0, 0, 0 / 8%),
+    0 16px 16px -16px rgb(0, 0, 0 /10%)
+}
+
+.chat-box .outgoing {
+    display: flex;
+}
+
+.outgoing .details {
+    margin-left: auto;
+    max-width: calc(100% - 130px);
+}
+.outgoing .details p {
+    background: #334;
+    color: #fff;
+    border-radius: 18px 18px 0 18px;
+}
+
+.chat-box .incoming {
+    display: flex;
+    align-items: flex-end;
+}
+
+.chat-box .incoming img {
+    height: 35px;
+    width: 35px;
+}
+
+.incoming .details {
+    margin-left: 10px;
+    margin-right: auto;
+    max-width: calc(100% - 130px);
+}
+.incoming .details p {
+    color: #333;
+    background: #fff;
+    border-radius: 18px 18px 18px 0;
+}
+
+.typing-area {
+    padding: 18px 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.typing-area input {
+    height: 45px;
+    width: calc(100% - 58px);
+    font-size: 17px;
+    border: 1px solid #ccc;
+    padding: 0 13px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.typing-area button {
+    width: 55px;
+    border: none;
+    outline: none;
+    background: #333;
+    color: #fff;
+    font-size: 19px;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+}
